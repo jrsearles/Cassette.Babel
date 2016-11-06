@@ -251,4 +251,8 @@ paket-files/
 
 # JetBrains Rider
 .idea/
+<<<<<<< HEAD
 *.sln.iml
+=======
+*.sln.iml
+>>>>>>> df79434ed6cfd667f4702f1134f7a210c8aca60a
