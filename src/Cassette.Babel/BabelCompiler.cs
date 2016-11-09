@@ -1,25 +1,29 @@
-﻿using System.Linq;
-using Cassette.Babel.Sessions;
+﻿using System;
+using System.Linq;
 
 namespace Cassette.Babel
 {
   public class BabelCompiler : ICompiler
   {
-    private readonly CassetteBabelSettings _babelSettings;
-    private readonly BabelScriptSessionProvider _scriptEngineProvider;
+    private readonly BabelCompilerQueue _queue;
 
-    public BabelCompiler(CassetteBabelSettings babelSettings, BabelScriptSessionProvider scriptEngineProvider)
+    public BabelCompiler(BabelCompilerQueue queue)
     {
-      _babelSettings = babelSettings;
-      _scriptEngineProvider = scriptEngineProvider;
+      _queue = queue;
     }
 
     public CompileResult Compile(string source, CompileContext context)
     {
-      using (var session = _scriptEngineProvider.GetSession())
+      var task = _queue.Enqueue(source);
+      try
       {
-        var output = session.Transpile(source, _babelSettings.BabelConfig);
+        var output = task.AwaitResult();
         return new CompileResult(output, Enumerable.Empty<string>());
+      }
+      catch (Exception ex)
+      {
+        var message = ex.Message + " in " + context.SourceFilePath;
+        throw new BabelCompilationException(message, context.SourceFilePath, ex);
       }
     }
   }

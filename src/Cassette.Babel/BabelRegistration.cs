@@ -1,6 +1,4 @@
-﻿using Cassette.Babel.Sessions;
-using Cassette.TinyIoC;
-using Cassette.Utilities;
+﻿using Cassette.TinyIoC;
 
 namespace Cassette.Babel
 {
@@ -8,11 +6,8 @@ namespace Cassette.Babel
   {
     public void Configure(TinyIoCContainer container)
     {
-      var babelStream = typeof(BabelRegistration).Assembly.GetManifestResourceStream("Cassette.Babel.Resources.babel.generated.js");
-
-      container.Register<IBabelScriptEngineFactory>(new BabelScriptEngineFactory(babelStream.ReadToEnd())).AsSingleton();
-      container.Register<CassetteBabelSettings>().AsSingleton();
-      container.Register<IBabelScriptSessionProvider, BabelScriptSessionProvider>().AsSingleton();
+      container.Register<BabelConfiguration>().AsSingleton();
+      container.Register<BabelCompilerQueue>().AsSingleton();
     }
   }
 }
