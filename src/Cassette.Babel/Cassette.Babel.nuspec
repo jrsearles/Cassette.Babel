@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://raw.githubusercontent.com/jrsearles/Cassette.Babel/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jrsearles/Cassette.Babel</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>
+      Version 1.0.0
+      * Initial release
+    </releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>web javascript cassette plugin babel bundling asp.net</tags>
+    <dependencies>
+      <dependency id="Cassette" version="[2,3)" />
+      <dependency id="Newtonsoft.Json" version="[6,10)" />
+      <dependency id="MsieJavaScriptEngine" version="[2,3)" />
+    </dependencies>
+  </metadata>
+</package>

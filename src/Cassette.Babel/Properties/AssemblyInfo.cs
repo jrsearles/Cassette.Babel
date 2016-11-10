@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Cassette.Babel")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Plugin for Cassette to transpile JavaScript via Babel.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Joshua Searles")]
 [assembly: AssemblyProduct("Cassette.Babel")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]

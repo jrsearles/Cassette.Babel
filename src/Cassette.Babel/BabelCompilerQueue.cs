@@ -11,7 +11,7 @@ namespace Cassette.Babel
     private readonly string _settingsJson;
     private readonly BlockingCollection<CompileTask> _taskQueue = new BlockingCollection<CompileTask>();
 
-    public BabelCompilerQueue(BabelConfiguration settings)
+    public BabelCompilerQueue(BabelSettings settings)
     {
       _settingsJson = settings.Serialize();
     }
@@ -53,26 +53,6 @@ function transpile(source,config){
   }
 }");
       return engine;
-
-//      var babelSource =
-//        this.GetType()
-//          .Assembly.GetManifestResourceStream("Cassette.Babel.Resources.babel-standalone.js")
-//          .ReadToEnd();
-
-//      var engine = new IEJavaScriptEngine();
-//      engine.Initialize();
-//      engine.LoadLibrary(babelSource);
-//      engine.LoadLibrary(@"
-//function transpile(source,config){
-//  try {
-//    return Babel.transform(source,JSON.parse(config)).code;
-//  } catch(err) {
-//    return 'ERROR:' + err.message;
-//  }
-//}
-//");
-
-//      return engine;
     }
 
     public void Dispose()
