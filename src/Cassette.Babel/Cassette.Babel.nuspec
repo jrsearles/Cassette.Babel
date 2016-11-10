@@ -11,13 +11,16 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+      Version 1.0.1
+      * Update Cassette dependency to 2.4
+      
       Version 1.0.0
       * Initial release
     </releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>web javascript cassette plugin babel bundling asp.net</tags>
     <dependencies>
-      <dependency id="Cassette" version="[2,3)" />
+      <dependency id="Cassette" version="[2.4,3)" />
       <dependency id="Newtonsoft.Json" version="[6,10)" />
       <dependency id="MsieJavaScriptEngine" version="[2,3)" />
     </dependencies>
