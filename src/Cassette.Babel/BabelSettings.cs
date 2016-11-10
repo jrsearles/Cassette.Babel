@@ -5,9 +5,9 @@ using Newtonsoft.Json.Serialization;
 
 namespace Cassette.Babel
 {
-  public class BabelConfiguration
+  public class BabelSettings
   {
-    public BabelConfiguration()
+    public BabelSettings()
     {
       this.Presets = new BabelConfigurationCollection();
       this.Plugins = new BabelConfigurationCollection();
@@ -18,8 +18,20 @@ namespace Cassette.Babel
       this.IgnorePatterns.Add(new Regex(@"node_modules", RegexOptions.IgnoreCase));
     }
 
+    /// <summary>
+    /// Gets the presets that are configured. The "es2015" preset is applied by default.
+    /// </summary>
+    /// <value>
+    /// The presets.
+    /// </value>
     public BabelConfigurationCollection Presets { get; private set; }
 
+    /// <summary>
+    /// Gets the plugins to be used when transpiling.
+    /// </summary>
+    /// <value>
+    /// The plugins.
+    /// </value>
     public BabelConfigurationCollection Plugins { get; private set; }
 
     [JsonIgnore]

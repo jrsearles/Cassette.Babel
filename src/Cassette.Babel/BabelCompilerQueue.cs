@@ -2,8 +2,7 @@
 using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
-using Cassette.Interop;
-using Cassette.Utilities;
+using MsieJavaScriptEngine;
 
 namespace Cassette.Babel
 {
@@ -40,22 +39,40 @@ namespace Cassette.Babel
       }
     }
 
-    private IEJavaScriptEngine CreateEngine()
+    private MsieJsEngine CreateEngine()
     {
-      var engine = new IEJavaScriptEngine();
-      engine.Initialize();
-      engine.LoadLibrary(this.GetType().Assembly.GetManifestResourceStream("Cassette.Babel.Resources.babel-standalone.min.js").ReadToEnd());
-      engine.LoadLibrary(@"
+      var engine = new MsieJsEngine();
+      engine.ExecuteResource("Cassette.Babel.Resources.browser-shim.js", this.GetType().Assembly);
+      engine.ExecuteResource("Cassette.Babel.Resources.babel-standalone.min.js", this.GetType().Assembly);
+      engine.Execute(@"
 function transpile(source,config){
   try {
     return Babel.transform(source,JSON.parse(config)).code;
   } catch(err) {
     return 'ERROR:' + err.message;
   }
-}
-");
-
+}");
       return engine;
+
+//      var babelSource =
+//        this.GetType()
+//          .Assembly.GetManifestResourceStream("Cassette.Babel.Resources.babel-standalone.js")
+//          .ReadToEnd();
+
+//      var engine = new IEJavaScriptEngine();
+//      engine.Initialize();
+//      engine.LoadLibrary(babelSource);
+//      engine.LoadLibrary(@"
+//function transpile(source,config){
+//  try {
+//    return Babel.transform(source,JSON.parse(config)).code;
+//  } catch(err) {
+//    return 'ERROR:' + err.message;
+//  }
+//}
+//");
+
+//      return engine;
     }
 
     public void Dispose()
@@ -89,7 +106,7 @@ function transpile(source,config){
         return _result;
       }
 
-      public void Compile(IEJavaScriptEngine engine)
+      public void Compile(MsieJsEngine engine)
       {
         try
         {

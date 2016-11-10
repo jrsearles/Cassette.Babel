@@ -19,6 +19,11 @@ namespace Cassette.Babel
 
     public void Process(ScriptBundle bundle)
     {
+      if (_babelSettings.IgnorePatterns.Any(x => x.IsMatch(bundle.Path)))
+      {
+        return;
+      }
+
       foreach (var asset in bundle.Assets)
       {
         if (_babelSettings.IgnorePatterns.Any(x => x.IsMatch(asset.Path)) == false)
