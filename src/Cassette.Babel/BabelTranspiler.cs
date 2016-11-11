@@ -17,7 +17,6 @@ namespace Cassette.Babel
     {
       var engine = _engineFactory.GetEngine();
       var output = engine.CallFunction<string>("transpile", source, _babelSettingsJson);
-      engine.CollectGarbage();
 
       if (string.IsNullOrEmpty(output) == false && output.StartsWith("ERROR:", StringComparison.Ordinal))
       {

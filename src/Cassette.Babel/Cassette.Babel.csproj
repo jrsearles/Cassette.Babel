@@ -38,16 +38,16 @@
       <HintPath>..\packages\AjaxMin.4.84.4790.14417\lib\net40\AjaxMin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Cassette, Version=2.4.0.18555, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Cassette.2.4.0\lib\net40-client\Cassette.dll</HintPath>
+    <Reference Include="Cassette, Version=2.4.2.13844, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Cloud-Applications\Cloud.Apps.BusinessIntelligence.VisionPlex.Web\src\packages\Cassette.2.4.2\lib\net40-client\Cassette.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MsieJavaScriptEngine, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
-      <HintPath>..\packages\MsieJavaScriptEngine.2.0.0\lib\net40-client\MsieJavaScriptEngine.dll</HintPath>
+    <Reference Include="MsieJavaScriptEngine, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\Cloud-Applications\Cloud.Apps.BusinessIntelligence.VisionPlex.Web\src\packages\MsieJavaScriptEngine.2.0.1\lib\net40-client\MsieJavaScriptEngine.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\..\..\Cloud-Applications\Cloud.Apps.BusinessIntelligence.VisionPlex.Web\src\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -61,8 +61,6 @@
   <ItemGroup>
     <Compile Include="BabelCompilationException.cs" />
     <Compile Include="BabelCompiler.cs" />
-    <Compile Include="BabelCompilerQueue.cs" />
-    <Compile Include="BabelCompilerQueueInitializer.cs" />
     <Compile Include="BabelConfigurationCollection.cs" />
     <Compile Include="BabelRegistration.cs" />
     <Compile Include="BabelSettings.cs" />
@@ -73,7 +71,9 @@
     <Compile Include="TranspileJavaScript.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Cassette.Babel.nuspec" />
+    <None Include="Cassette.Babel.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

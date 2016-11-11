@@ -40,6 +40,8 @@ function transpile(source,config){
       {
         engine.Dispose();
       }
+
+      _engines.Dispose();
     }
   }
 }

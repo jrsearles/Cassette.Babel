@@ -7,7 +7,6 @@ namespace Cassette.Babel
     public void Configure(TinyIoCContainer container)
     {
       container.Register<BabelSettings>().AsSingleton();
-      container.Register<BabelCompilerQueue>().AsSingleton();
       container.Register<BabelJavaScriptEngineFactory>().AsSingleton();
     }
   }

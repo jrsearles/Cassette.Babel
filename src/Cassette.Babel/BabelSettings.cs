@@ -13,7 +13,6 @@ namespace Cassette.Babel
       this.Plugins = new BabelConfigurationCollection();
       this.IgnorePatterns = new List<Regex>();
 
-      this.Presets.Add("es2015");
       this.IgnorePatterns.Add(new Regex(@"Cassette\.Aspnet\.Resources", RegexOptions.IgnoreCase));
       this.IgnorePatterns.Add(new Regex(@"node_modules", RegexOptions.IgnoreCase));
     }

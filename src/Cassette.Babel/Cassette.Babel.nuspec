@@ -20,9 +20,9 @@
     <copyright>Copyright 2016</copyright>
     <tags>web javascript cassette plugin babel bundling asp.net</tags>
     <dependencies>
-      <dependency id="Cassette" version="2.4.0" />
+      <dependency id="Cassette" version="2.4.2" />
       <dependency id="Newtonsoft.Json" version="6.0.8" />
-      <dependency id="MsieJavaScriptEngine" version="2.0.0" />
+      <dependency id="MsieJavaScriptEngine" version="2.0.1" />
     </dependencies>
   </metadata>
 </package>
