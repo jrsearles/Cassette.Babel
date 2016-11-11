@@ -8,6 +8,7 @@ namespace Cassette.Babel
     {
       container.Register<BabelSettings>().AsSingleton();
       container.Register<BabelCompilerQueue>().AsSingleton();
+      container.Register<BabelJavaScriptEngineFactory>().AsSingleton();
     }
   }
 }
