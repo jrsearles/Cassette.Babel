@@ -1,6 +1,5 @@
 ﻿// using Cassette.Babel.Sessions;
 using Cassette.Utilities;
-using Microsoft.ClearScript.V8;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using MsieJavaScriptEngine;
