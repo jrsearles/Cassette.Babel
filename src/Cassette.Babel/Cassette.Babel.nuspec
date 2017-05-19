@@ -11,17 +11,20 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
-Version 1.0.4
-* Correct assembly version format
+      Version 1.0.5
+      * Allow BabelCompilationException to be serializable across app domains
 
-Version 1.0.3
-* Remove default preset
-      
-Version 1.0.1
-* Update Cassette dependency to 2.4
-      
-Version 1.0.0
-* Initial release
+      Version 1.0.4
+      * Correct assembly version format
+
+      Version 1.0.3
+      * Remove default preset
+
+      Version 1.0.1
+      * Update Cassette dependency to 2.4
+
+      Version 1.0.0
+      * Initial release
     </releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>web javascript cassette plugin babel bundling asp.net</tags>
