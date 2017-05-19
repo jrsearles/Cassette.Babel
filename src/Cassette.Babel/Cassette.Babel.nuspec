@@ -11,6 +11,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+Version 1.0.4
+* Correct assembly version format
+
 Version 1.0.3
 * Remove default preset
       
