@@ -11,6 +11,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+      Version 1.1.0
+      * Updated to babel-standalone 6.24.2
+      * Added static "Version" property to BabelTranspiler class to expose the version of babel used
+      
       Version 1.0.5
       * Allow BabelCompilationException to be serializable across app domains
 

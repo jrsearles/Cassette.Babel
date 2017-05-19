@@ -25,5 +25,10 @@ namespace Cassette.Babel
 
       return output;
     }
+
+    public static string Version
+    {
+      get { return "6.24.2"; }
+    }
   }
 }
