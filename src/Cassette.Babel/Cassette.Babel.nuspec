@@ -11,6 +11,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+      Version 1.1.1
+      * Updated MsieJavaScriptEngine to latest version
+      
       Version 1.1.0
       * Updated to babel-standalone 6.24.2
       * Added static "Version" property to BabelTranspiler class to expose the version of babel used
@@ -35,7 +38,7 @@
     <dependencies>
       <dependency id="Cassette" version="2.4.2" />
       <dependency id="Newtonsoft.Json" version="6.0.8" />
-      <dependency id="MsieJavaScriptEngine" version="2.0.1" />
+      <dependency id="MsieJavaScriptEngine" version="2.2.1" />
     </dependencies>
   </metadata>
 </package>
