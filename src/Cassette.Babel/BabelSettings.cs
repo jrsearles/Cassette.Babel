@@ -5,6 +5,9 @@ using Newtonsoft.Json.Serialization;
 
 namespace Cassette.Babel
 {
+  /// <summary>
+  /// Configuration class for the settings which will be passed into Babel.
+  /// </summary>
   public class BabelSettings
   {
     public BabelSettings()
@@ -18,7 +21,7 @@ namespace Cassette.Babel
     }
 
     /// <summary>
-    /// Gets the presets that are configured. The "es2015" preset is applied by default.
+    /// Gets the presets that are configured.
     /// </summary>
     /// <value>
     /// The presets.
@@ -36,7 +39,7 @@ namespace Cassette.Babel
     [JsonIgnore]
     public ICollection<Regex> IgnorePatterns { get; private set; }
 
-    public string Serialize()
+    internal string Serialize()
     {
       return JsonConvert.SerializeObject(this, new JsonSerializerSettings
       {

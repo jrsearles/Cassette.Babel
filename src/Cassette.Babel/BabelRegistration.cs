@@ -1,4 +1,5 @@
-﻿using Cassette.TinyIoC;
+﻿using Cassette.Babel.Jurassic;
+using Cassette.TinyIoC;
 
 namespace Cassette.Babel
 {
@@ -7,7 +8,7 @@ namespace Cassette.Babel
     public void Configure(TinyIoCContainer container)
     {
       container.Register<BabelSettings>().AsSingleton();
-      container.Register<BabelJavaScriptEngineFactory>().AsSingleton();
+      container.Register<IBabelScriptEngine, JurassicScriptEngine>().AsSingleton();
     }
   }
 }

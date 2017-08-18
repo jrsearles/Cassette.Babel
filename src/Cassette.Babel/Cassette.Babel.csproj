@@ -42,8 +42,9 @@
       <HintPath>..\packages\Cassette.2.4.2\lib\net40-client\Cassette.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MsieJavaScriptEngine, Version=2.2.1.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
-      <HintPath>..\packages\MsieJavaScriptEngine.2.2.1\lib\net45\MsieJavaScriptEngine.dll</HintPath>
+    <Reference Include="Jurassic, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jurassic.2.2.1\lib\net35\Jurassic.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -63,9 +64,11 @@
     <Compile Include="BabelConfigurationCollection.cs" />
     <Compile Include="BabelRegistration.cs" />
     <Compile Include="BabelSettings.cs" />
-    <Compile Include="BabelJavaScriptEngineFactory.cs" />
     <Compile Include="BabelTranspiler.cs" />
+    <Compile Include="IBabelScriptEngine.cs" />
     <Compile Include="InsertBabelTranspiler.cs" />
+    <Compile Include="Jurassic\JurassicScriptEngineFactory.cs" />
+    <Compile Include="Jurassic\EmbeddedResourceScriptSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TranspileJavaScript.cs" />
   </ItemGroup>

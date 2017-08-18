@@ -11,6 +11,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+      Version 2.0.0-alpha1
+      * Replaced MsieJavaScriptEngine with Jurassic.
+      * Added IBabelScriptEngine interface to allow consumers to swap out the script engine.
+      * Updated to babel-standalone 6.26.0
+      
       Version 1.1.1
       * Updated MsieJavaScriptEngine to latest version
       

@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace Cassette.Babel
+﻿namespace Cassette.Babel
 {
   public class BabelTranspiler
   {
-    private readonly BabelJavaScriptEngineFactory _engineFactory;
+    private readonly IBabelScriptEngine _engineFactory;
     private readonly string _babelSettingsJson;
 
-    public BabelTranspiler(BabelSettings babelSettings, BabelJavaScriptEngineFactory engineFactory)
+    public BabelTranspiler(BabelSettings babelSettings, IBabelScriptEngine engineFactory)
     {
       _engineFactory = engineFactory;
       _babelSettingsJson = babelSettings.Serialize();
@@ -15,20 +13,12 @@ namespace Cassette.Babel
 
     public string Transpile(string source)
     {
-      var engine = _engineFactory.GetEngine();
-      var output = engine.CallFunction<string>("transpile", source, _babelSettingsJson);
-
-      if (string.IsNullOrEmpty(output) == false && output.StartsWith("ERROR:", StringComparison.Ordinal))
-      {
-        throw new InvalidOperationException(output.Substring(6));
-      }
-
-      return output;
+      return _engineFactory.Execute(source, _babelSettingsJson);
     }
 
     public static string Version
     {
-      get { return "6.24.2"; }
+      get { return "6.26.0"; }
     }
   }
 }
