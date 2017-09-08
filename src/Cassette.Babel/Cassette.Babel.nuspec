@@ -43,7 +43,7 @@
     <dependencies>
       <dependency id="Cassette" version="2.4.2" />
       <dependency id="Newtonsoft.Json" version="6.0.8" />
-      <dependency id="MsieJavaScriptEngine" version="2.2.1" />
+      <dependency id="Jurassic" version="2.2.1" />
     </dependencies>
   </metadata>
 </package>
